@@ -80,6 +80,28 @@ export class CalculatorComponent {
     }
   }
 
+  applyPercentage() {
+
+    let value = null;
+
+    if(this.equationDisplay) {
+      const valArray = this.equationDisplay.split(' ');
+      valArray.splice(valArray.length -2);
+      value = this.calculateExpression(valArray.join(' '));
+    }
+
+    if(value) {
+      this.currentValue = value  / 100 * this.currentValue;
+      if(this.equationDisplay) {
+        const array = this.equationDisplay.split(' ');
+        array[array.length - 1] = `${this.currentValue}`;
+        this.equationDisplay = array.join(' ')
+      }
+    } else {
+      return
+    }
+  }
+
   applyToggleNegPos() {
     if(!this.isLastInputAnOperator()) {
       this.isNegative = !this.isNegative;
@@ -90,7 +112,8 @@ export class CalculatorComponent {
     }
   }
 
-  calculateExpression(expression: string) {
+  calculateExpression(expression: string ) {
+
     try {
       // Use eval() to evaluate the expression
       const result = eval(expression);

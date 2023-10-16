@@ -20,6 +20,7 @@ export class EquationInputComponent {
   @Output() equals = new EventEmitter<void>();
   @Output() toggleNegPos = new EventEmitter<void>();
   @Output() addOperator = new EventEmitter<OperatorEnum>();
+  @Output() percentage = new EventEmitter<void>();
 
   currentValueInput: string = '';
 
@@ -180,7 +181,9 @@ export class EquationInputComponent {
       case FunctionValueEnum.TOGGLE_POS_NEG:
         this.toggleNegPos.emit();
         break;
-
+      case FunctionValueEnum.PERCENTAGE:
+        this.percentage.emit();
+        break;
       default:
         break;
     }

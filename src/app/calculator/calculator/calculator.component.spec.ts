@@ -140,4 +140,19 @@ describe('CalculatorComponent', () => {
     expect(component.result).toBe(0);
   })
 
+  it('should apply percentage operations correctly', () => {
+    component.updateCurrentValue(6);
+    fixture.detectChanges();
+    component.applyOperator(OperatorEnum.ADD);
+    fixture.detectChanges();
+    component.updateCurrentValue(50);
+    fixture.detectChanges();
+    component.applyPercentage();
+    fixture.detectChanges();
+
+    expect(component.currentValue).toBe(3);
+    expect(component.equationDisplay).toBe('6 + 3');
+
+  })
+
 })
