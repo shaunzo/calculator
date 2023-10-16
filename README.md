@@ -1,5 +1,16 @@
 # Calculator
 
+
+# To Install
+cd into project root directory and run `ng serve`
+
+# To run unit tests
+from project root run `ng test`
+
+# To run e2e automated tests
+ensure that you have run `ng serve` from project root to start up development server then run `npm run test-cypress`. Select E2E Testing, select Electron, click 'Start E2E Testing in Electron' and click on calculator.cy.ts file
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 ## Development server
