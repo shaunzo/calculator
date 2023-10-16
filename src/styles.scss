@@ -3,6 +3,7 @@
 @import './styles/gap';
 @import './styles/justify';
 @import './styles/items';
+@import './styles/variables';
 
 /* You can add global styles to this file, and also import other style files */
 html {
@@ -11,6 +12,7 @@ html {
 
 body {
   height: inherit;
+  background-color: $grey;
 }
 
 html,

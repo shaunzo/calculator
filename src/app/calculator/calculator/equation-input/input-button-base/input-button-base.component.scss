@@ -1,12 +1,14 @@
+@import '../../../../../styles/variables';
 :host {
   flex-basis: 50px;
 }
 
 .input-button {
   border-radius: 8px;
-  border: 1px solid #000000;
+  border: 1px solid $secondary;
   width: 100%;
   height: 50px;
   cursor: pointer;
   font-size: 2rem;
+  color: $primary;
 }
