@@ -11,4 +11,10 @@
   cursor: pointer;
   font-size: 2rem;
   color: $primary;
+
+  &:active {
+    background: $primary;
+    color: $light;
+  }
+
 }

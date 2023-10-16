@@ -1,3 +1,11 @@
-<button (click)="onButtonClick()" class="input-button flex flex-col justify-center items-center" [ngClass]="classes">
+<button
+  (click)="onButtonClick()"
+  class="input-button flex flex-col justify-center items-center"
+  [ngClass]="{
+    'background-tertiary': type === 'OPERATOR',
+    'background-secondary': type === 'METHOD',
+    classes
+  }"
+>
 {{ label }}
 </button>

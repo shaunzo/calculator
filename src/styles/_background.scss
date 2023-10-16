@@ -4,3 +4,13 @@
   background-color: $primary;
   color: $light;
 }
+
+.background-secondary {
+  background-color: $secondary;
+  color: $light !important;
+}
+
+.background-tertiary {
+  background-color: $tertiary;
+  color: $light !important;
+}
