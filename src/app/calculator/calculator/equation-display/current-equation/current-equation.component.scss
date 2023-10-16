@@ -1,0 +1,8 @@
+@import '../../../../../styles/variables';
+
+:host {
+  height: 20px;
+  color: $light;
+  text-align: right;
+  font-size: 1.2rem;
+}

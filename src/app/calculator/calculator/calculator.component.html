@@ -1,0 +1,18 @@
+<div class="calculator flex flex-col justify-center items-center" data-test="calculator">
+
+  <app-equation-display
+    class="flex flex-col shrink-0 basis-28"
+    [currentValue]="currentValue"
+    [equation]="equationDisplay"
+    [result]="result"
+  />
+
+  <app-equation-input
+    (currentValue)="updateCurrentValue($event)"
+    (cancel)="onCancel()"
+    (addOperator)="applyOperator($event)"
+    (equals)="applyEquals()"
+    (toggleNegPos)="applyToggleNegPos()"
+  />
+
+</div>

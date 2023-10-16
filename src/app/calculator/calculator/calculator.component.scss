@@ -1,0 +1,9 @@
+@import '../../../styles/variables';
+
+.calculator {
+  width: 350px;
+  background-color: $dark;
+  margin: auto;
+  padding: 3rem;
+  border-radius: 12px;
+}

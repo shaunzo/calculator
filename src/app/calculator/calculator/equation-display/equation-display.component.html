@@ -1,0 +1,11 @@
+<div class="flex flex-col grow justify-between">
+  <app-current-equation class="grow" [equation]="equation"></app-current-equation>
+
+  <ng-container *ngIf="!result">
+    <app-current-value [value]="currentValue"></app-current-value>
+  </ng-container>
+
+  <ng-container *ngIf="result">
+    <app-result [value]="result"></app-result>
+  </ng-container>
+</div>
